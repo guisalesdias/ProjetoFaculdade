@@ -1,4 +1,4 @@
-Instituto Esperança - Entrega I
+Instituto Esperança
 --------------------------------
 
 Estrutura do projeto pronta para envio ao GitHub.
