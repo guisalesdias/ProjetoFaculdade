@@ -1,0 +1,107 @@
+/* Menu principal */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-primaria, #4A90E2);
+    padding: 16px;
+    color: white;
+    height: 80px; /* define altura fixa do navbar */
+}
+
+/* Logo maior visualmente sem aumentar o navbar */
+.logo img {
+    max-height: 60px; /* mantém dentro do navbar */
+    width: auto;
+    transform: scale(1.5); /* aumenta visualmente sem mexer no fundo */
+    transform-origin: left center; /* alinha o aumento para o canto do navbar */
+    transition: transform 0.3s ease;
+}
+
+/* Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* Dropdown */
+.navbar li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--cor-primaria, #4A90E2);
+    padding: 8px 0;
+    border-radius: 8px;
+    min-width: 180px;
+}
+
+.navbar li:hover ul {
+    display: block;
+}
+
+.navbar li ul li {
+    padding: 8px 16px;
+}
+
+/* Botão hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8px;
+        background-color: var(--cor-primaria, #4A90E2);
+        border-radius: 8px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        transform: scale(1.2); /* menor escala no mobile */
+        max-height: 50px; /* mantém dentro do navbar */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        transform: scale(1.1); /* ainda menor em celulares pequenos */
+        max-height: 40px;
+    }
+}
+

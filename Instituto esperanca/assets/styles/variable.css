@@ -1,0 +1,24 @@
+:root {
+    /* cores */
+    --cor-primary: #4A90E2;
+    --cor-secondary: #50E3C2;
+    --cor-terciary: #F5A623;
+    --cor-neutra-1: #FFFFFF;
+    --cor-neutra-2: #F0F0F0;
+    --cor-neutra-3: #9B9B9B;
+    --cor-neutra-4: #4A4A4A;
+
+    /* tipografia */
+    --font-xs: 12px;
+    --font-sm: 14px;
+    --font-md: 16px;
+    --font-lg: 20px;
+    --font-xl: 28px;
+
+    /* espaçamento */
+    --space-8: 8px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-48: 48px;
+}
