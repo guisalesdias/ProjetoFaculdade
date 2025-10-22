@@ -1,0 +1,118 @@
+/* ------------------------------
+   BASE
+-------------------------------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,h2,h3 { margin: 0 0 16px 0; }
+p { margin: 0 0 16px 0; }
+img { max-width: 100%; display: block; }
+
+/* ------------------------------
+   CONTAINER PRINCIPAL
+-------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;      /* centraliza horizontalmente */
+    padding: 0 16px;     /* dá espaço nas laterais */
+    box-sizing: border-box;
+}
+
+/* ------------------------------
+   HEADER
+-------------------------------- */
+header {
+    background-color: #4A90E2;
+    color: white;
+    padding: 16px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* ------------------------------
+   HERO
+-------------------------------- */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* centraliza horizontalmente */
+    margin: 32px 0;
+    gap: 24px;
+    text-align: center; /* centraliza texto interno */
+}
+
+.hero-text {
+    flex: 1 1 400px;
+}
+
+.hero-text h2 { font-size: 28px; margin-bottom: 16px; }
+.hero-text p { font-size: 16px; }
+
+.hero-image {
+    flex: 1 1 50px;
+}
+
+.hero-image img {
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------
+   SEÇÕES
+-------------------------------- */
+section {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ------------------------------
+   GRID DE CARDS
+-------------------------------- */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    justify-items: center; /* centraliza cada card dentro da grid */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 300px; /* mantém cards uniformes */
+}
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+footer {
+    background-color: #4A90E2;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
+
+/* ------------------------------
+   RESPONSIVIDADE
+-------------------------------- */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* hero vira coluna no mobile */
+    }
+}
